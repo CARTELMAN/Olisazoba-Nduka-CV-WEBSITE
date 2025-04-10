@@ -1,7 +1,7 @@
 :root {
-    --primary: Navy; /* Navy Blue for authority */
-    --accent: blue; /* Coral for highlights */
-    --dark: .role-card; /* Deep gray for text */
+    --primary: Navy;
+    --accent: blue;
+    --dark: #333; /* Changed from invalid class reference */
     --light: Navy;
 }
 * {
@@ -83,6 +83,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 .role-card.left { margin-right: auto; }
 .role-card.right { margin-left: auto; }
 .role-card.left:hover {
@@ -91,6 +92,7 @@ body {
 .role-card.right:hover{
    transform: translateY(-5px);
 }
+
 .skill-pill {
     display: inline-block;
     padding: 0.5rem 1.2rem;
@@ -107,7 +109,6 @@ body {
     }
     .timeline-bar { display: none; }
 }
-
 .print-btn {
     position: fixed;
     top: 1rem;
@@ -118,6 +119,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 1000; /* Ensure button stays on top */
 }
 
 @media print {
